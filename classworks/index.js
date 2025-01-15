@@ -24,16 +24,30 @@ import chalk from "chalk";
 //const append = fs.appendFileSync('example.txt', data)
 //console.log(append)//
 
-//JSON
-let text ='JSON file data';
-const newfile = fs.writeFileSync("./users.json", text);
-console.log(chalk.red(text));
+//JSON CRUS Create, Read, Update, and Delete
 
-fs.readFile("users.json",function (err, data) {
-  if (err) throw err;
-  console.log(chalk.green('success'))
 
-  fs.writeFile("user.json", data, callback);
-  const users = JSON.parse(text);
-  console.log(chalk.pink(users));
-});
+
+
+//function addfile() {
+//let file = fs.readFileSync(path);
+//console.log(chalk.green(file))
+//let adduser = file.unshift(newUser);
+//return console.log(adduser);}
+//
+//addfile()
+const path = "users.json";
+const newUser = { name: 'Ursa'};
+
+//function adding(user){
+  let file = fs.readFileSync(path) 
+   console.log(chalk.green(file));
+   let added = fs.appendFileSync(path, JSON.stringify(newUser))
+   console.log(added)
+  //let added = file.push(user)
+
+  //return console.log(added)
+//}
+
+//adding(newUser)
+
