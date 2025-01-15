@@ -1,5 +1,5 @@
 import { isUtf8 } from "buffer";
-import fs from "fs";
+import fs, { writeFileSync } from "fs";
 import chalk from "chalk";
 //fs.writeFile('./example.txt', 'hello world', (err)=>{
 //    if(err){console.log('error writing file:', err);
@@ -37,17 +37,21 @@ import chalk from "chalk";
 //
 //addfile()
 const path = "users.json";
-const newUser = { name: 'Ursa'};
+const newUser = { name: 'Ursa' };
 
-//function adding(user){
-  let file = fs.readFileSync(path) 
-   console.log(chalk.green(file));
-   let added = fs.appendFileSync(path, JSON.stringify(newUser))
-   console.log(added)
-  //let added = file.push(user)
 
-  //return console.log(added)
+let file = fs.readFileSync(path, 'utf-8')
+//console.log(chalk.green(typeof file,'--',file));
+let convertedfile = JSON.parse(file);
+//console.log(chalk.magentaBright(typeof convertedfile,'--', convertedfile));
+convertedfile.unshift(newUser);
+console.log(typeof convertedfile,'--' ,convertedfile)
+//let stringfile = JSON.stringify(convertedfile);
+//console.log(chalk.green(typeof stringfile,stringfile))
+fs.writeFileSync(path, JSON.stringify(convertedfile))
+//return console.log(added)
 //}
+
 
 //adding(newUser)
 
