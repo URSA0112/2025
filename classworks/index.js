@@ -45,7 +45,7 @@ let file = fs.readFileSync(path, 'utf-8')
 let convertedfile = JSON.parse(file);
 //console.log(chalk.magentaBright(typeof convertedfile,'--', convertedfile));
 convertedfile.unshift(newUser);
-console.log(typeof convertedfile,'--' ,convertedfile)
+//console.log(typeof convertedfile,'--' ,convertedfile)
 //let stringfile = JSON.stringify(convertedfile);
 //console.log(chalk.green(typeof stringfile,stringfile))
 fs.writeFileSync(path, JSON.stringify(convertedfile))
