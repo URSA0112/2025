@@ -1,4 +1,3 @@
-import { isUtf8 } from "buffer";
 import fs, { writeFileSync } from "fs";
 import chalk from "chalk";
 //fs.writeFile('./example.txt', 'hello world', (err)=>{
@@ -26,32 +25,41 @@ import chalk from "chalk";
 
 //JSON CRUS Create, Read, Update, and Delete
 
-
-
-
-//function addfile() {
-//let file = fs.readFileSync(path);
-//console.log(chalk.green(file))
-//let adduser = file.unshift(newUser);
-//return console.log(adduser);}
-//
-//addfile()
-const path = "users.json";
-const newUser = { name: 'Ursa' };
-
-
-let file = fs.readFileSync(path, 'utf-8')
+//let file = fs.readFileSync(path, 'utf-8')
 //console.log(chalk.green(typeof file,'--',file));
-let convertedfile = JSON.parse(file);
+//let convertedfile = JSON.parse(file);
 //console.log(chalk.magentaBright(typeof convertedfile,'--', convertedfile));
-convertedfile.unshift(newUser);
+//convertedfile.unshift(newUser);
 //console.log(typeof convertedfile,'--' ,convertedfile)
 //let stringfile = JSON.stringify(convertedfile);
 //console.log(chalk.green(typeof stringfile,stringfile))
-fs.writeFileSync(path, JSON.stringify(convertedfile))
+//fs.writeFileSync(path, JSON.stringify(convertedfile))
 //return console.log(added)
 //}
 
+const path = "users.json";
+const newUser = { name: "Ursa" };
 
-//adding(newUser)
+function addNewUser(path, addingUser) {
+  let file = fs.readFileSync(path, "utf-8");
+  let objfile = JSON.parse(file);
 
+  console.log(chalk.blueBright(" original all users :",file));
+  for (let i = 0; i < objfile.length; i++) {
+    console.log(chalk.green(objfile[i].name));
+    if (objfile[i].name === "John Doe") {
+      let olduser = objfile[i];
+      console.log(" olduser -", olduser);
+      let newuser = (olduser = addingUser);
+      console.log("  newuser-", newuser);
+      olduser = newuser;
+      console.log(chalk.red(objfile[i].name,'--CHANGING-->', olduser.name ));
+      objfile[i] = newuser;
+      console.log(chalk.green('changed'))
+    }
+  }
+  let updatedfile = JSON.stringify(objfile);
+  fs.writeFileSync(path, updatedfile);
+}
+
+addNewUser(path, newUser);
