@@ -69,24 +69,29 @@ import sharp from "sharp";
 //--------end function --------->
 // png --> webp
 
-//const inputfiles = fs.readdirSync("./input")
-//for (let i = 0; i < inputfiles.length; i++) {
-//    const inputpath = `./input/${inputfiles[i]}`
-//    //console.log(chalk.red(inputpath))
-//    const outputfile = fs.readdirSync("./output")
-//    const outputpath = `./output/img${i}.webp`
-//    //console.log(chalk.red(chalk.green(typeof inputfiles[i])))
-//
-//    sharp(inputpath).toFile(outputpath), (err, info) => {
-//        console.log(err, info)
-//    }
-//}
+const inputfiles = fs.readdirSync("./input") 
+
+for (let i = 0; i < inputfiles.length; i++) {
+    const inputpath = `./input/${inputfiles[i]}`
+    //console.log(chalk.red(inputpath))
+    const outputpath = `./output/img${i}.webp`
+    sharp(inputpath).toFile(outputpath), (err, info) => {
+    console.log(err, info)
+
+    }
+}
+
+
+
+
+
 //const outputfile = fs.readdirSync("./output")
 //console.log(typeof outputfile)
-
-//deleting ALL files using loop and FS
-const files = fs.readdirSync("./output");
-for (let i = 0; i < files.length; i++) {
-    const path = `./output/${files[i]}`;
-    fs.unlink(path, (err) => { console.log(err) })
-}
+//
+////deleting ALL files using loop and FS
+//const files = fs.readdirSync("./output");
+//for (let i = 0; i < files.length; i++) {
+//    const path = `./output/${files[i]}`;
+//    fs.unlink(path, (err) => { console.log(err) })
+//}
+//
