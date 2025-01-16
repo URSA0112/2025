@@ -1,5 +1,6 @@
 import fs, { writeFileSync } from "fs";
 import chalk from "chalk";
+import sharp from "sharp";
 //fs.writeFile('./example.txt', 'hello world', (err)=>{
 //    if(err){console.log('error writing file:', err);
 //        return;
@@ -36,30 +37,41 @@ import chalk from "chalk";
 //fs.writeFileSync(path, JSON.stringify(convertedfile))
 //return console.log(added)
 //}
+//
+//const path = "users.json";
+//const newUser = { name: "Ursa" };
+//
+//function addNewUser(path, addingUser) {
+//  let file = fs.readFileSync(path, "utf-8");
+//  let objfile = JSON.parse(file);
+//
+//  console.log(chalk.blueBright(" original all users :",file));
+//  for (let i = 0; i < objfile.length; i++) {
+//    console.log(chalk.green(objfile[i].name));
+//    if (objfile[i].name === "John Doe") {
+//      let olduser = objfile[i];
+//      console.log(" olduser -", olduser);
+//      let newuser = (olduser = addingUser);
+//      console.log("  newuser-", newuser);
+//      olduser = newuser;
+//      console.log(chalk.red(objfile[i].name,'--CHANGING-->', olduser.name ));
+//      objfile[i] = newuser;
+//      console.log(chalk.green('changed'))
+//    }
+//  }
+//  let updatedfile = JSON.stringify(objfile);
+//  fs.writeFileSync(path, updatedfile);
+//}
+//
+//addNewUser(path, newUser);
 
-const path = "users.json";
-const newUser = { name: "Ursa" };
 
-function addNewUser(path, addingUser) {
-  let file = fs.readFileSync(path, "utf-8");
-  let objfile = JSON.parse(file);
+//--------end function --------->
 
-  console.log(chalk.blueBright(" original all users :",file));
-  for (let i = 0; i < objfile.length; i++) {
-    console.log(chalk.green(objfile[i].name));
-    if (objfile[i].name === "John Doe") {
-      let olduser = objfile[i];
-      console.log(" olduser -", olduser);
-      let newuser = (olduser = addingUser);
-      console.log("  newuser-", newuser);
-      olduser = newuser;
-      console.log(chalk.red(objfile[i].name,'--CHANGING-->', olduser.name ));
-      objfile[i] = newuser;
-      console.log(chalk.green('changed'))
-    }
-  }
-  let updatedfile = JSON.stringify(objfile);
-  fs.writeFileSync(path, updatedfile);
-}
-
-addNewUser(path, newUser);
+//const path = "./classworks/input"
+//const data = "screeshshot.png"
+//const input = fs.writeFileSync(path, 'screeshshot.png' )
+//const output = 
+//let file = fs.readdirSync(path,)
+const read = fs.readdirSync('./classworks')
+console.log(read)
