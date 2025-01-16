@@ -67,11 +67,13 @@ import sharp from "sharp";
 
 
 //--------end function --------->
+// png --> webp
 
-//const path = "./classworks/input"
-//const data = "screeshshot.png"
-//const input = fs.writeFileSync(path, 'screeshshot.png' )
-//const output = 
-//let file = fs.readdirSync(path,)
-const read = fs.readdirSync('./classworks')
-console.log(read)
+const file = fs.readdirSync("./input")
+const path = "./input/arraymethod.png";
+const topath = "./output/output.webp";
+sharp(path).toFile(topath),(err,info)=>{
+    console.log(err,info)
+}
+
+console.log(file[0])
