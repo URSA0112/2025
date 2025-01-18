@@ -69,17 +69,20 @@ import sharp from "sharp";
 //--------end function --------->
 // png --> webp
 
-const inputfiles = fs.readdirSync("./input") 
+//1) -->input folder dotor baigaa files-g read hiij gargaj irj bn
+//const inputfiles = fs.readdirSync("./input")
+//2) --> olon zurag baigaa uchiraas neg negeer ni convert hiine
+//for (let i = 0; i < inputfiles.length; i++) {
+    //const inputpath = `./input/${inputfiles[i]}`
+    // --> ene bol InPut-path , (path deer STRING datatypetai ugugdul baih ystoi )
 
-for (let i = 0; i < inputfiles.length; i++) {
-    const inputpath = `./input/${inputfiles[i]}`
-    //console.log(chalk.red(inputpath))
-    const outputpath = `./output/img${i}.webp`
-    sharp(inputpath).toFile(outputpath), (err, info) => {
-    console.log(err, info)
+    //const outputpath = `./output/img${i}.webp`
+    // --> ene bol OutPut-path, (datatype : string)
 
-    }
-}
+    //sharp(inputpath).toFile(outputpath), (err, info) => { 
+        //console.log(err, info) 
+    //}//--> undsen SHARP code
+//} // LOOP end
 
 
 
@@ -87,11 +90,10 @@ for (let i = 0; i < inputfiles.length; i++) {
 
 //const outputfile = fs.readdirSync("./output")
 //console.log(typeof outputfile)
-//
-////deleting ALL files using loop and FS
+
+//deleting ALL files using loop and FS
 //const files = fs.readdirSync("./output");
 //for (let i = 0; i < files.length; i++) {
 //    const path = `./output/${files[i]}`;
 //    fs.unlink(path, (err) => { console.log(err) })
 //}
-//
