@@ -18,9 +18,9 @@
 //}; person.sayName();
 //
 //const person2 = {
-//    name: 'Alice_2',
+//    name: 'Alice2',
 //    sayName: () => {
-//        console.log(this.name)
+//        console.log(person2.name)
 //    }
 //}; person2.sayName()
 
@@ -64,61 +64,13 @@
 //  }
 //-------------------------------------------//
 
-// Create a Trie node
-function createNode() {
-  return {
-    children: {}, // Holds child nodes (characters)
-    isEndOfWord: false, // Marks the end of a word
-  };
-}
+//const numbers = [1, 2, 3, 4];
+//const squared = numbers.map(num => num * num);
 
 
-// Trie structure
-const trie = createNode(); // The root node
+//function square(arr){
 
-// Insert a word into the Trie
-function insert(word) {
-  let currentNode = trie;
+  
 
-  for (const char of word) {
-    // If the character doesn't exist, create a new node
-    if (!currentNode.children[char]) {
-      currentNode.children[char] = createNode();
-    }
-    currentNode = currentNode.children[char]; // Move to the next node
-  }
 
-  // Mark the end of the word
-  currentNode.isEndOfWord = true;
-}
 
-// Search for a word in the Trie
-function search(word) {
-  let currentNode = trie;
-
-  for (const char of word) {
-    // If the character is not found, the word does not exist
-    if (!currentNode.children[char]) {
-      return false;
-    }
-    currentNode = currentNode.children[char]; // Move to the next node
-  }
-
-  // Check if the last node is marked as the end of a word
-  return currentNode.isEndOfWord;
-}
-
-// Check if a prefix exists in the Trie
-function startsWith(prefix) {
-  let currentNode = trie;
-
-  for (const char of prefix) {
-    // If the character is not found, the prefix does not exist
-    if (!currentNode.children[char]) {
-      return false;
-    }
-    currentNode = currentNode.children[char]; // Move to the next node
-  }
-
-  return true; // All characters in the prefix were found
-}
