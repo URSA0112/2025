@@ -64,11 +64,7 @@
 //  }
 //-------------------------------------------//
 
-//const numbers = [1, 2, 3, 4];
-//const squared = numbers.map(num => num * num);
 
-
-//function square(arr){
 
   
 
