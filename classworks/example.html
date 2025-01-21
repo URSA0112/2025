@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forEach Example Without Query Selector</title>
+</head>
+<body>
+  <div id="BtnContainerElRef">
+    <button class="btn" value="5">5%</button>
+    <button class="btn" value="10">10%</button>
+    <button class="btn" value="15">15%</button>
+    <button class="btn" value="25">25%</button>
+  </div>
+
+  <script>
+    // JavaScript
+    const buttons = document.getElementsByClassName('btn'); // Select buttons by class name
+
+    // Convert HTMLCollection to an array
+    Array.prototype.forEach.call(buttons, button => {
+      button.addEventListener('click', () => {
+        console.log(`Button clicked: ${button.value}%`);
+      });
+    });
+  </script>
+</body>
+</html>
