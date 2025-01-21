@@ -1,26 +1,30 @@
-//document.body.style.backgroundColor = 'black'
 
-//percentage = (parts/whole)*10
+//percentage = (parts/whole)*1
 
- let percent = document.getElementsByClassName("btn");
- 
-//function percentage(inputnum) {
-//  let value = (percent * inputnum) / 100;
-//  let addednum = inputnum + value;
-//  return addednum;
-//}
-//console.log(percentage(100, 5));
+const BtnContainerElRef = document.getElementById("buttoncontainer"); 
+const inputElRef = document.getElementById("inputnum");
+const resultElRef = document.getElementById("result")
+const percent = document.getElementsByClassName("btn")
+console.log(typeof percent)
+//const EachButtoneElRef = percent.forEach(element => {
+//    console.log ()
+//});
 
-//percent = buttons
-//input num = write on display
+//function tipcounter(inputnum, percent) {
+//  let tipamount = (percent * inputnum) / 100;
+//  let addednum = inputnum + tipamount;
+//  return console.log(addednum);
 //
-const BtncontainerElRef = document.getElementById('buttoncontainer')
+//}
 
-BtncontainerElRef.addEventListener("onclick",function(){
-    console.log(BtncontainerElRef.innerText)
-});
-//const inputValue = document.getElementById("inputnum");
-//console.log(inputValue.value);
-//inputValue.addEventListener("input", function(){
-//    console.log(inputValue.value)
-//})
+   
+
+//
+//const inputvalueElRef = inputElRef.value
+//BtnContainerElRef.addEventListener('click', (tipcounter(200,5 )))
+
+
+
+
+
+
