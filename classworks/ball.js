@@ -5,7 +5,7 @@ const BtnContainerElRef = document.getElementById("buttoncontainer");
 const inputElRef = document.getElementById("inputnum");
 const resultElRef = document.getElementById("result")
 const percent = document.getElementsByClassName("btn")
-console.log(typeof percent)
+
 //const EachButtoneElRef = percent.forEach(element => {
 //    console.log ()
 //});
