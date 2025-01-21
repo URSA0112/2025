@@ -1,9 +1,3 @@
-//function tipcounter(inputnum, percent) {
-//  let tipamount = (percent * inputnum) / 100;
-//  let addednum = inputnum + tipamount;
-//  return console.log(addednum)
-//}
-
 const BtnContainerElRef = document.getElementById("buttoncontainer");
 const inputElRef = document.getElementById("inputnum");
 const resultElRef = document.getElementById("result");
@@ -18,6 +12,14 @@ btnElFef[i].addEventListener('click', function () {
     console.log(result)
   })
 }
+
+
+
+
+
+
+
+
 
 
 
