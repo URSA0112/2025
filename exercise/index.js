@@ -65,7 +65,6 @@ import sharp from "sharp";
 //
 //addNewUser(path, newUser);
 
-
 //--------end function --------->
 // png --> webp
 
@@ -73,15 +72,15 @@ import sharp from "sharp";
 //const inputfiles = fs.readdirSync("./input")
 //2) --> olon zurag baigaa uchiraas neg negeer ni convert hiine
 //for (let i = 0; i < inputfiles.length; i++) {
-    //const inputpath = `./input/${inputfiles[i]}`
-    // --> ene bol InPut-path , (path deer STRING datatypetai ugugdul baih ystoi )
+//const inputpath = `./input/${inputfiles[i]}`
+// --> ene bol InPut-path , (path deer STRING datatypetai ugugdul baih ystoi )
 
-    //const outputpath = `./output/img${i}.webp`
-    // --> ene bol OutPut-path, (datatype : string)
+//const outputpath = `./output/img${i}.webp`
+// --> ene bol OutPut-path, (datatype : string)
 
-    //sharp(inputpath).toFile(outputpath), (err, info) => { 
-        //console.log(err, info) 
-    //}//--> undsen SHARP code
+//sharp(inputpath).toFile(outputpath), (err, info) => { 
+//console.log(err, info) 
+//}//--> undsen SHARP code
 //} // LOOP end
 
 
@@ -97,3 +96,30 @@ import sharp from "sharp";
 //    const path = `./output/${files[i]}`;
 //    fs.unlink(path, (err) => { console.log(err) })
 //}
+
+// const numbers = [{ name: "ursa" }, { age: 10 }, { hobby: ["ski", "music"] }];
+// const each = numbers.map(each => each)
+// console.log(each)
+// const eachkey = Object.keys(each)
+// const eachvalue = Object.values(each)
+// console.log(chalk.blue(eachkey), eachvalue)
+
+const inputvalues = [
+    {
+        key: 1, //(any)address for map , identify , search , find , ....
+        text: "take a shower", //(text)inputvalue
+        done: false, //(boolean)status ... for change
+    },
+    {
+        key: 1, //(any)address for map , identify , search , find , ....
+        text: "go to bed", //(text)inputvalue
+        done: false, //(boolean)status ... for change
+    },
+];
+
+const value = inputvalues.map((each, index) => { return [each.text]})
+const push = 'some string'
+const emptyArr = [];
+emptyArr.push(push)
+const total = value.push(emptyArr)
+console.log(value )
