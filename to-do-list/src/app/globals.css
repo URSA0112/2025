@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+.pages {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 200px;
+  font-family: "Inter", sans-serif;
+}
+
+.to-do-list-container {
+  background-color: #ffffff;
+  width: 377px;
+  height: auto;
+  margin: 0 auto;
+  gap: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+}
+
+.title {
+  width: 345px;
+  height: 28px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  gap: 0px;
+  opacity: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.inputsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  width: 280px;
+  height: 38px;
+  border-radius: 6px;
+  border-color: #b7b7f4;
+  border: 0.2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  border: none;
+  padding: 0;
+  margin: 0.2px;
+  height: 100%;
+  width: 100%;
+}
+
+.addbutton {
+  width: 59px;
+  height: 38px;
+  /* padding: 8px 16px 8px 16px; */
+  margin: 0;
+  gap: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-left: 6px;
+  background-color:  #357efa;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+
+}
+
+.tabs-container {
+  display: flex;
+  width: 345px;
+  height: 32px;
+  gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-self: center;
+}
+
+.lists {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  overflow: auto;
+}
+
+.eachlist {
+  min-width: 340px;
+  height: auto;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.1px, solid, black;
+  margin-top: 8px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+li {
+  margin: 0;
+  font-size: 14px;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 2px;
+  text-align: center;
+  width: 180px;
+  height: auto;
+  list-style: none;
+}
+
+.listbuttons-container {
+  position: relative;
+  right: 5px;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.listbutton {
+  width: auto;
+  height: auto;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(255, 255, 255);
+}
+
+ul {
+  padding: 0;
+}
+
+.checkbutton {
+  background-color: #3c82f6;
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+.activebtn {
+  background: linear-gradient(135deg, #9a46f4, #357efa);
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(121, 168, 238, 0.4);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+.activebtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(255, 118, 136, 0.5);
+}
+
+.delete-allbtn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 34, 0.8),
+    rgba(255, 0, 0, 0.5)
+  );
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(217, 4, 41, 0.4);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+.delete-allbtn:active {
+  transform: scale(1.19);
+}
+button {
+  background-color: rgba(210, 210, 210, 0.2);
+  color: rgba(103, 103, 103, 0.86);
+  border: none;
+  border-radius: 10%;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+input::placeholder {
+  color: #939393;
+  font-size: 14px;
+  padding-left: 8px;
+  opacity: 1; /* Ensure it's fully visible */
+}
